@@ -25,8 +25,7 @@ class Song
       if song.name == name
         return song
       elsif song.name != name
-        false
-        
+        nil
       end 
     end
   end 
