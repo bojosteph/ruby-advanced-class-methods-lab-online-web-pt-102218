@@ -46,5 +46,20 @@ class Song
     self.class.all << self
   end
   
+  def self.new_from_filename(filename)
+    
+    row = filename
+    
+    data = row.split(" - ")
+    artist_name = data[0].gsub(".mp3", "")
+    
+    song = self.new
+    song.name = song_name
+    song.artist_name = artist_name
+    song
+  end
+    
+    
+  
 
 end
