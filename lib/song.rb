@@ -24,7 +24,8 @@ class Song
     @@all.each do |song|
       if song.name == name
         return song
-      else @@all.include? name
+      elsif song.name != name
+        false
         
       end 
     end
