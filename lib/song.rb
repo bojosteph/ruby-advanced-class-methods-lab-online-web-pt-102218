@@ -21,14 +21,8 @@ class Song
   end
   
   def self.find_by_name(name)
-    @@all.each do |song|
-      if song.name == name
-        return song
-      elsif song.name != name
-        nil
-      end 
-    end
-  end 
+    self.all.detect {|song| song.name = name}
+  end
   
   def self.find_or_create_by_name(name)
     self.find_by_name(name) || self.create_by_name(name)
